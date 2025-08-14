@@ -12,7 +12,7 @@ export default function Education() {
       degree: "Higher Secondary Education",
       institution: "PMSA PTHSS Kakkov, Malappuram",
       year: "2018 - 2020",
-      details: "Specialized in science with computer science, building analytical and problem-solving skills.",
+      details: "Specialized in science, building analytical and problem-solving skills.",
     },
   ];
 
