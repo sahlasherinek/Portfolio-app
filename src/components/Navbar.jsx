@@ -13,17 +13,31 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav
+      className="shadow-lg"
+      style={{ backgroundColor: "#2C3E50" }} // Primary color
+    >
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-indigo-600">My Portfolio</h1>
-        <ul className="flex space-x-6 text-gray-700 font-medium">
+        <h1 className="text-2xl font-bold" style={{ color: "#E67E22" }}>
+          My Portfolio
+        </h1>
+        <ul className="flex space-x-6 font-medium">
           {navLinks.map((link) => (
             <li key={link.path}>
               <Link
                 to={link.path}
-                className={`hover:text-indigo-600 transition duration-300 ${
-                  location.pathname === link.path ? "text-indigo-600 font-semibold" : ""
-                }`}
+                style={{
+                  color:
+                    location.pathname === link.path ? "#E67E22" : "#FAF9F6",
+                  fontWeight:
+                    location.pathname === link.path ? "600" : "normal",
+                  transition: "color 0.3s ease",
+                }}
+                onMouseOver={(e) => (e.target.style.color = "#27AE60")} // Accent color on hover
+                onMouseOut={(e) =>
+                  (e.target.style.color =
+                    location.pathname === link.path ? "#E67E22" : "#FAF9F6")
+                }
               >
                 {link.label}
               </Link>

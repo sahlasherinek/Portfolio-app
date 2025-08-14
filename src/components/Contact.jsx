@@ -17,7 +17,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="bg-gray-50 min-h-screen py-12 px-6 flex items-center">
+    <section className="bg-gradient-to-b from-gray-50 to-gray-100 min-h-screen py-12 px-6 flex items-center">
       <div className="max-w-3xl mx-auto w-full">
         <h1 className="text-4xl font-bold text-gray-800 mb-8 border-b-4 border-indigo-500 inline-block">
           Contact Me
@@ -25,10 +25,10 @@ export default function Contact() {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-white shadow-lg rounded-lg p-8 space-y-6"
+          className="bg-white shadow-xl rounded-xl p-8 space-y-6 hover:shadow-2xl transition duration-300"
         >
           <div>
-            <label className="block text-gray-700 font-medium mb-2">
+            <label className="block text-gray-700 font-semibold mb-2">
               Name
             </label>
             <input
@@ -37,12 +37,13 @@ export default function Contact() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              placeholder="Enter your full name"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
 
           <div>
-            <label className="block text-gray-700 font-medium mb-2">
+            <label className="block text-gray-700 font-semibold mb-2">
               Email
             </label>
             <input
@@ -51,12 +52,13 @@ export default function Contact() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              placeholder="you@example.com"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
 
           <div>
-            <label className="block text-gray-700 font-medium mb-2">
+            <label className="block text-gray-700 font-semibold mb-2">
               Message
             </label>
             <textarea
@@ -64,16 +66,17 @@ export default function Contact() {
               value={formData.message}
               onChange={handleChange}
               required
-              rows="4"
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              placeholder="Write your message here..."
+              rows="5"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             ></textarea>
           </div>
 
           <button
             type="submit"
-            className="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition duration-300"
+            className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg shadow hover:bg-indigo-700 hover:scale-105 transform transition duration-300"
           >
-            Send Message
+            Send Message 🚀
           </button>
         </form>
       </div>
